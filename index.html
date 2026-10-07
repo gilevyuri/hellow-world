@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hellow world</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 48px 56px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+      max-width: 90vw;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #2d3748;
+      margin-bottom: 28px;
+      word-break: break-word;
+    }
+
+    button {
+      font-size: 1.125rem;
+      padding: 12px 48px;
+      border: none;
+      border-radius: 8px;
+      background: #667eea;
+      color: #ffffff;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+
+    button:hover {
+      background: #5a6fd8;
+    }
+
+    button:active {
+      transform: scale(0.96);
+    }
+
+    .cheer {
+      margin-top: 24px;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #48bb78;
+      animation: pop 0.4s ease;
+    }
+
+    .cheer[hidden] {
+      display: none;
+    }
+
+    @keyframes pop {
+      0% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+      70% {
+        transform: scale(1.15);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Hellow world</h1>
+    <button id="ok-btn" type="button">ОК</button>
+    <p id="cheer" class="cheer" hidden>Ура!</p>
+  </main>
+
+  <script>
+    document.getElementById('ok-btn').addEventListener('click', function () {
+      document.getElementById('cheer').hidden = false;
+    });
+  </script>
+</body>
+</html>
